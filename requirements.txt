@@ -1,0 +1,35 @@
+# requirements.txt - Project Dependencies
+
+# Phase 1: Data Collection
+pandas
+numpy
+yfinance
+requests
+pathlib
+
+# Phase 1: Feature Engineering
+# Note: TA-Lib requires system library first:
+#   macOS: brew install ta-lib && pip install TA-Lib
+#   Linux: sudo apt-get install ta-lib && pip install TA-Lib
+#   If installation fails, code will use pure Python fallback implementations
+TA-Lib                 # For technical indicators (RSI, MACD, etc.) - Optional, has fallback
+seaborn
+stable_baselines3
+scikit-learn           # For StandardScaler and MinMaxScaler
+scipy                  # For cosine similarity calculation (if needed)
+
+# Phase 2 onwards (Anticipated)
+torch                  # PyTorch base
+torch-geometric        # PyG for Graph Neural Networks
+torch-sparse           # Sparse tensor operations for neighbor sampling
+pyg-lib                # PyG extensions for faster sampling operations
+networkx               # For basic graph analysis/manipulation
+stable-baselines3      # For Reinforcement Learning Agent (if using common RL libraries)
+
+# Additional dependencies for mini-batch training
+tqdm                   # Progress bars for training loops
+
+# Phase 3: Visualization and Metrics
+matplotlib            # Plotting library for confusion matrix and training curves
+seaborn               # Statistical visualization (heatmaps, confusion matrix)
+tensorboard           # TensorBoard logging for training monitoring
